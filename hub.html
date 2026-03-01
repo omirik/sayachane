@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sayaçhane | Sayaç Merkezi</title>
+<meta name="description" content="Arama yap, kategori seç ve sayacı yeni pencerede büyütülmüş görünümle aç." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#0a0d14" />
+<link rel="canonical" href="https://sayachane.com/hub.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sayaçhane | Sayaç Merkezi" />
+<meta property="og:description" content="Arama yap, kategori seç ve sayacı yeni pencerede büyütülmüş görünümle aç." />
+<meta property="og:url" content="https://sayachane.com/hub.html" />
+<meta property="og:image" content="https://sayachane.com/og-cover.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sayaçhane | Sayaç Merkezi" />
+<meta name="twitter:description" content="Arama yap, kategori seç ve sayacı yeni pencerede büyütülmüş görünümle aç." />
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "WebSite", "name": "Sayaçhane", "url": "https://sayachane.com/", "inLanguage": "tr-TR", "description": "Ramazan, iftar, sahur, YKS, KPSS ve özel gün sayaçları."}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Sayaçhane | Sayaç Merkezi", "description": "Arama yap, kategori seç ve sayacı yeni pencerede büyütülmüş görünümle aç.", "url": "https://sayachane.com/hub.html", "inLanguage": "tr-TR", "isPartOf": {"@type": "WebSite", "name": "Sayaçhane", "url": "https://sayachane.com/"}}]}</script>
+<style>
+:root{
+  --bg:#0a0d14;
+  --bg2:#0b1020;
+  --surface: rgba(255,255,255,.05);
+  --surface2: rgba(255,255,255,.035);
+  --stroke: rgba(255,255,255,.10);
+  --stroke2: rgba(255,255,255,.14);
+  --text: #f6f7fb;
+  --muted: rgba(246,247,251,.64);
+  --muted2: rgba(246,247,251,.46);
+  --brand: #8b5cf6;
+  --brand2:#22c55e;
+  --brand3:#06b6d4;
+  --shadow: 0 18px 70px rgba(0,0,0,.55);
+  --r-xl: 30px;
+  --r-lg: 22px;
+  --r-md: 16px;
+  --w: 1080px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(800px 520px at 18% 10%, rgba(139,92,246,.18), transparent 60%),
+    radial-gradient(760px 540px at 82% 78%, rgba(6,182,212,.12), transparent 60%),
+    radial-gradient(680px 520px at 70% 18%, rgba(34,197,94,.10), transparent 65%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+body:before{
+  content:"";
+  position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  opacity:.16;
+  pointer-events:none;
+  mix-blend-mode:overlay;
+  z-index:0;
+}
+.app{position:relative; z-index:1; min-height:100%}
+.appbar{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(10,13,20,.66);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.appbar-inner{
+  width:min(var(--w), calc(100% - 24px));
+  margin:0 auto;
+  padding:12px 0;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+.left, .right{display:flex; align-items:center; gap:10px}
+.brand{display:flex; align-items:center; gap:12px; min-width:0}
+.brand strong{font-size:14px; letter-spacing:.01em}
+.brand span{display:block; font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,var(--brand),#a78bfa);box-shadow:0 0 0 6px rgba(139,92,246,.10)}
+.iconbtn{
+  width:44px;height:44px;border-radius:14px;
+  border:1px solid var(--stroke);
+  background: var(--surface2);
+  color:var(--text);
+  cursor:pointer;
+  display:grid; place-items:center;
+  transition:.16s ease;
+  user-select:none;
+}
+.iconbtn:hover{transform:translateY(-1px); border-color:var(--stroke2)}
+.pill{
+  padding:10px 12px; border-radius:999px;
+  background: var(--surface2);
+  border:1px solid var(--stroke);
+  font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase;
+  cursor:pointer;
+  transition:.16s ease;
+}
+.pill:hover{border-color:var(--stroke2); transform:translateY(-1px)}
+.container{width:min(var(--w), calc(100% - 24px)); margin:0 auto; padding:22px 0 92px}
+.card-surface{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-xl);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  box-shadow: var(--shadow);
+}
+.home-card{padding:34px;text-align:center;position:relative;overflow:hidden}
+.home-card:after{
+  content:""; position:absolute; right:-180px; bottom:-200px;
+  width:420px; height:420px; border-radius:999px;
+  background: radial-gradient(circle, rgba(139,92,246,.20), transparent 68%);
+  pointer-events:none;
+}
+.time{font-size:clamp(58px, 10vw, 92px);line-height:.92;letter-spacing:-.06em;margin:18px 0 0}
+.date{margin:14px 0 0;font-size:15px;color:var(--muted);line-height:1.8}
+.btn{
+  min-height:56px;padding:0 18px;border-radius:18px;cursor:pointer;
+  border:1px solid var(--stroke);background: var(--surface2);color:var(--text);
+  font-weight:900;letter-spacing:.01em;transition:.16s ease;
+  display:inline-flex;align-items:center;gap:10px;justify-content:center
+}
+.btn:hover{transform:translateY(-1px);border-color:var(--stroke2)}
+.btn.primary{border:none;background:linear-gradient(135deg,var(--brand),#a78bfa);box-shadow:0 16px 34px rgba(139,92,246,.18)}
+.hint{margin-top:16px;color:var(--muted2);font-size:13px;line-height:1.8}
+.header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.h1{margin:0;font-size:28px;letter-spacing:-.04em}
+.sub{margin:8px 0 0;color:var(--muted);line-height:1.8;font-size:14px}
+.toolbar{display:grid;grid-template-columns:minmax(0,1fr) 260px auto;gap:12px;margin:14px 0 14px}
+.field,.select{
+  min-height:56px;border-radius:18px;border:1px solid var(--stroke);
+  background: var(--surface2);display:flex;align-items:center;gap:10px;padding:0 14px
+}
+.field input,.select select{width:100%;border:none;outline:none;background:transparent;color:var(--text);font-size:15px}
+.select select option{color:#0b1020}
+.smallbtn{min-height:56px;padding:0 16px;border-radius:18px;border:1px solid var(--stroke);background:var(--surface2);color:var(--text);font-weight:900;cursor:pointer;transition:.16s ease}
+.smallbtn:hover{transform:translateY(-1px);border-color:var(--stroke2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
+.chip{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--stroke);background:var(--surface2);color:var(--text);font-size:12px;font-weight:950;cursor:pointer;transition:.16s ease;letter-spacing:.04em}
+.chip.active{background: rgba(139,92,246,.16);border-color: rgba(139,92,246,.34)}
+.section{margin:6px 0 14px;padding:14px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03))}
+.section h2{margin:0;font-size:14px;letter-spacing:.10em;text-transform:uppercase;color:rgba(246,247,251,.82)}
+.section p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px}
+.card{
+  padding:16px;border-radius:22px;border:1px solid var(--stroke);background:var(--surface2);
+  cursor:pointer;transition:.16s ease;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;position:relative
+}
+.card:hover{transform:translateY(-1px);border-color:var(--stroke2)}
+.tag{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);font-size:11px;font-weight:950;letter-spacing:.10em;text-transform:uppercase;color:rgba(246,247,251,.85);margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.03em}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.units{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:8px;margin-top:14px}
+.u{text-align:center;padding:10px 8px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+.u strong{display:block;font-size:20px;letter-spacing:-.04em;margin-bottom:4px}
+.u span{display:block;font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+.meta{margin-top:14px;color:var(--muted2);line-height:1.8;font-size:13px}
+.actions{position:absolute;top:12px;right:12px;display:flex;gap:8px}
+.act{
+  width:38px;height:38px;border-radius:14px;border:1px solid rgba(255,255,255,.10);
+  background: rgba(10,13,20,.35);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);
+  color:var(--text);display:grid;place-items:center;cursor:pointer;transition:.16s ease
+}
+.act:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.16)}
+.detail-wrap{display:grid;place-items:center;padding:22px 22px 92px}
+.detail-card{width:min(980px, 100%);padding:28px;position:relative;overflow:hidden}
+.detail-card:after{content:"";position:absolute;left:-200px;top:-220px;width:440px;height:440px;border-radius:999px;background: radial-gradient(circle, rgba(6,182,212,.16), transparent 70%);pointer-events:none}
+.kicker{display:inline-flex;align-items:center;gap:10px;min-height:34px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);color:rgba(246,247,251,.86);font-size:11px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+.h2{margin:14px 0 0;font-size:clamp(28px, 6vw, 54px);letter-spacing:-.06em;line-height:.95}
+.desc{margin:12px 0 0;color:var(--muted);line-height:1.9}
+.bigunits{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:10px;margin-top:18px}
+.bu{padding:18px 10px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);text-align:center}
+.bu strong{display:block;font-size:34px;letter-spacing:-.06em;margin-bottom:6px}
+.bu span{display:block;font-size:11px;color:var(--muted2);letter-spacing:.14em;text-transform:uppercase}
+.bottomnav{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(10px + var(--safe-b));
+  width:min(720px, calc(100% - 24px));
+  border-radius:18px;border:1px solid rgba(255,255,255,.10);
+  background:rgba(10,13,20,.66);
+  backdrop-filter: blur(16px);-webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 16px 58px rgba(0,0,0,.45);
+  display:grid;grid-template-columns:repeat(3,1fr);padding:8px;z-index:20
+}
+.navbtn{border:none;background:transparent;color:var(--muted);border-radius:14px;padding:10px 10px;cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;font-weight:950;letter-spacing:.02em;transition:.16s ease}
+.navbtn span{font-size:11px;letter-spacing:.10em;text-transform:uppercase}
+.navbtn.active{color:var(--text);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10)}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.18s ease;z-index:30}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;left:12px;top:12px;bottom:12px;
+  width:min(360px, calc(100% - 24px));
+  border-radius:22px;border:1px solid rgba(255,255,255,.10);
+  background:rgba(10,13,20,.82);
+  backdrop-filter: blur(16px);-webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  transform: translateX(-110%);transition:.20s ease;
+  z-index:31;padding:16px;display:flex;flex-direction:column;gap:10px
+}
+.drawer.open{transform: translateX(0)}
+.drawer h3{margin:4px 0 0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,247,251,.85)}
+.drawer .muted{color:var(--muted);font-size:13px;line-height:1.7}
+.drawer a.btn,.drawer button.btn{width:100%;justify-content:flex-start}
+.toast{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(90px + var(--safe-b));
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);
+  color:var(--text);border-radius:14px;padding:10px 12px;font-weight:950;font-size:13px;
+  opacity:0;pointer-events:none;transition:.18s ease;z-index:40
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(-2px)}
+@media (max-width: 980px){
+  .toolbar{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .units,.bigunits{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+@media (max-width: 560px){
+  .grid{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+<style>
+  body.cityopen #cityOverlay{opacity:1;pointer-events:auto}
+  body.cityopen #citySheet{transform:translateX(-50%) translateY(0)}
+  #cityOverlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.18s ease;z-index:32}
+  #citySheet{z-index:33; transform:translateX(-50%) translateY(140%); transition:.20s ease}
+  .cityItem{min-height:52px; padding:0 14px; border-radius:16px; border:1px solid rgba(255,255,255,.10); background:rgba(255,255,255,.04); color:var(--text); display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:.14s ease}
+  .cityItem:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.16)}
+  .cityItem small{color:var(--muted); font-weight:800; letter-spacing:.08em; text-transform:uppercase}
+.heart{width:40px;height:40px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(10,13,20,.25);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:.14s ease}
+.heart:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.16)}
+</style>
+
+</head>
+<body>
+  <div class="app">
+    <header class="appbar">
+      <div class="appbar-inner">
+        <div class="left">
+          <button class="iconbtn" id="menuBtn" type="button" aria-label="Menü">☰</button>
+        </div>
+        <a class="brand" href="index.html" aria-label="Sayaçhane ana sayfa">
+          <span class="dot" aria-hidden="true"></span>
+          <div>
+            <strong>Sayaçhane</strong>
+            <span>Sayaç Merkezi</span>
+          </div>
+        </a>
+        <div class="right">
+          <button class="pill" id="addCustom" type="button">Özel Sayaç</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="header-row">
+        <div>
+          <h1 class="h1" id="pageTitle">Ara ve Aç</h1>
+          <p class="sub" id="pageSub">Tıkla → seçtiğin sayaç <strong>yeni pencerede</strong> büyük görünümle açılır. İftar/Sahur için şehir seç.</p>
+        </div>
+        <div class="right" style="gap:10px">
+          <button class="smallbtn" id="reset" type="button">Sıfırla</button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="field">
+          <span aria-hidden="true">🔎</span>
+          <input id="search" type="text" placeholder="Sayaç ara: iftar, sahur, yks, kpss, bayram..." />
+        </div>
+        <div class="select" style="padding:0">
+          <button class="smallbtn" id="cityBtn" type="button" style="width:100%; justify-content:space-between; border:none; background:transparent; min-height:56px; padding:0 14px; border-radius:18px">
+            <span id="cityBtnText">Şehir</span>
+            <span aria-hidden="true">▾</span>
+          </button>
+        </div>
+        <button class="smallbtn" id="featured" type="button">Öne Çıkan</button>
+      </div>
+
+      <div class="section" id="ramazanSection" style="display:none">
+        <h2>Ramazan Özel</h2>
+        <p>İftar ve sahur canlı, ayrıca Ramazan ve Bayram sayaçları. Şehir seçimini unutma.</p>
+      </div>
+
+      <div class="chips" id="chips"></div>
+      <div class="grid" id="grid"></div>
+
+      <p class="hint" style="text-align:left; margin-top:16px">⭐ Favoriye ekle • ↗ Paylaş • Kartın kendisine tıkla: Sayaç yeni pencerede açılır.</p>
+    </div>
+
+    <nav class="bottomnav" aria-label="Alt menü">
+      <button class="navbtn active" id="navAll" type="button"><div>🏠</div><span>Tümü</span></button>
+      <button class="navbtn" id="navSearch" type="button"><div>🔎</div><span>Ara</span></button>
+      <button class="navbtn" id="navFav" type="button"><div>⭐</div><span>Fav</span></button>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Hamburger menü">
+      <div class="brand" style="padding:6px 6px 10px 6px">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <strong>Sayaçhane</strong>
+          <span>Menü</span>
+        </div>
+      </div>
+
+      <a class="btn primary" href="index.html">🏠 Ana Sayfa</a>
+
+      <div class="section" style="margin-top:6px">
+        <h2>Hızlı Kategoriler</h2>
+        <p>Tek dokunuşla filtrelenmiş sayaç listesi.</p>
+        <div style="display:grid; gap:10px; margin-top:12px">
+          <button class="btn" id="menuRamazan" type="button">🌙 Ramazan Özel</button>
+          <button class="btn" id="menuSinavlar" type="button">🎓 Sınavlar</button>
+          <button class="btn" id="menuOzelgunler" type="button">🎉 Özel Günler</button>
+          <button class="btn" id="menuGunluk" type="button">📅 Günlük</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Kısayollar</h2>
+        <p>Ara veya favorilere hızlı geç.</p>
+        <div style="display:grid; gap:10px; margin-top:12px">
+          <button class="btn" id="menuAll" type="button">🏠 Tümü</button>
+          <button class="btn" id="menuAra" type="button">🔎 Ara</button>
+          <button class="btn" id="menuFav" type="button">⭐ Favoriler</button>
+        </div>
+      </div>
+
+      <p class="muted">Sayaçlar karttan tıklayınca <b>yeni pencerede</b> açılır.</p>
+      <button class="btn" id="menuClose" type="button">Kapat</button>
+    </aside>
+
+    
+  <div class="overlay" id="cityOverlay" aria-hidden="true"></div>
+  <div class="drawer" id="citySheet" aria-label="Şehir Seç" style="left:50%; width:min(560px, calc(100% - 24px)); top:auto; bottom:calc(10px + var(--safe-b)); max-height:78vh; overflow:auto">
+    <div class="brand" style="padding:2px 0 6px 0">
+      <span class="dot" aria-hidden="true"></span>
+      <div>
+        <strong>Şehir Seç</strong>
+        <span>Yaz, filtrele, seç</span>
+      </div>
+    </div>
+    <div class="field" style="margin-top:8px">
+      <span aria-hidden="true">🔎</span>
+      <input id="citySearch" type="text" placeholder="Şehir ara… (örn: Samsun)" autocomplete="off" />
+    </div>
+    <div class="section" style="margin-top:10px">
+  <h2>Hızlı</h2>
+  <p>Popüler şehirler.</p>
+  <div class="chips" id="cityQuick" style="margin-top:10px"></div>
+</div>
+<div class="section" style="margin-top:10px">
+  <h2>Son Seçilenler</h2>
+  <p>En son kullandıkların.</p>
+  <div class="chips" id="cityRecent" style="margin-top:10px"></div>
+</div>
+<div class="section" style="margin-top:10px">
+  <h2>Favori Şehirler</h2>
+  <p>Kalp ile ekle, tek dokunuşla geç.</p>
+  <div class="chips" id="cityFav" style="margin-top:10px"></div>
+</div>
+<div class="section" style="margin-top:10px">
+  <h2>Liste</h2>
+  <p>Arama ile filtrelenir. Şehre dokun → seç.</p>
+</div>
+    <div id="cityList" style="display:grid; gap:10px; margin-top:10px"></div>
+    <button class="btn" id="cityClose" type="button">Kapat</button>
+  </div>
+
+    <div class="toast" id="toast">—</div>
+  </div>
+
+<script>
+(() => {
+  const TZ = 'Europe/Istanbul';
+  const STORAGE_CUSTOM = 'sayachane-custom-counters-v1';
+  const STORAGE_FAV = 'sayachane-favorites-v1';
+  const STORAGE_CITY = 'sayachane-city-v1';
+  const countersBase = [{"id": "ramazan", "title": "Ramazan 2027", "category": "Ramazan", "tag": "Ramazan", "desc": "Ramazan başlangıcına kalan süre.", "type": "fixed", "target": "2027-02-08T00:00", "page": "c-ramazan.html"}, {"id": "iftar", "title": "İftar", "category": "Ramazan", "tag": "Canlı Vakit", "desc": "Seçilen şehre göre akşam (Maghrib) vaktine kalan süre.", "type": "dynamic", "dynamic": "iftar", "page": "c-iftar.html"}, {"id": "sahur", "title": "Sahur", "category": "Ramazan", "tag": "Canlı Vakit", "desc": "Seçilen şehre göre imsak (Fajr) vaktine kalan süre.", "type": "dynamic", "dynamic": "sahur", "page": "c-sahur.html"}, {"id": "ramazan-bayrami", "title": "Ramazan Bayramı 2026", "category": "Özel Gün", "tag": "Bayram", "desc": "Ramazan Bayramı 1. güne kalan süre.", "type": "fixed", "target": "2026-03-21T00:00", "page": "c-ramazan-bayrami.html"}, {"id": "kurban-bayrami", "title": "Kurban Bayramı 2026", "category": "Özel Gün", "tag": "Bayram", "desc": "Kurban Bayramı 1. güne kalan süre (örnek tarih).", "type": "fixed", "target": "2026-05-27T00:00", "page": "c-kurban-bayrami.html"}, {"id": "yks-2026", "title": "YKS 2026", "category": "Eğitim", "tag": "YKS", "desc": "2026 YKS sınav gününe geri sayım.", "type": "fixed", "target": "2026-06-20T00:00", "page": "c-yks-2026.html"}, {"id": "kpss-2026", "title": "KPSS 2026", "category": "Eğitim", "tag": "KPSS", "desc": "2026 KPSS Lisans gününe geri sayım.", "type": "fixed", "target": "2026-09-06T00:00", "page": "c-kpss-2026.html"}, {"id": "cumhuriyet", "title": "Cumhuriyet Bayramı 2026", "category": "Özel Gün", "tag": "Milli Gün", "desc": "29 Ekim Cumhuriyet Bayramı’na kalan süre.", "type": "fixed", "target": "2026-10-29T00:00", "page": "c-cumhuriyet.html"}, {"id": "yilbasi-2027", "title": "Yeni Yıl 2027", "category": "Özel Gün", "tag": "Yeni Yıl", "desc": "Yeni yıla kalan süre.", "type": "fixed", "target": "2027-01-01T00:00", "page": "c-yilbasi-2027.html"}, {"id": "gun-sonu", "title": "Günün Sonu", "category": "Günlük", "tag": "Günlük", "desc": "Bugünün bitmesine kalan süre.", "type": "dynamic", "dynamic": "endOfDay", "page": "c-gun-sonu.html"}, {"id": "hafta-sonu", "title": "Hafta Sonu", "category": "Günlük", "tag": "Günlük", "desc": "Bir sonraki Cumartesi 00:00'a kalan süre.", "type": "dynamic", "dynamic": "nextSaturday", "page": "c-hafta-sonu.html"}];
+  const cities = ["Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "Mersin", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"];
+  const ramazanOzelIds = ["iftar", "sahur", "ramazan", "ramazan-bayrami"];
+  const $ = (id) => document.getElementById(id);
+
+  const categories = ['Tümü','Ramazan','Eğitim','Özel Gün','Günlük','Özel (Senin)'];
+  const state = {
+    cat:'Tümü',
+    q:'',
+    city: (localStorage.getItem(STORAGE_CITY) || 'İstanbul'),
+    prayer:{iftar:null,sahur:null},
+    custom: loadCustom(),
+    tab:'all',
+    fav: loadFav()
+  };
+
+  // Toast
+  let toastT=null;
+  function showToast(msg){
+    const t=$('toast'); if(!t) return;
+    t.textContent=msg; t.classList.add('show');
+    clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'), 1600);
+  }
+
+  function loadCustom(){ try{ return JSON.parse(localStorage.getItem(STORAGE_CUSTOM)||'[]'); }catch(e){ return []; } }
+  function saveCustom(){ localStorage.setItem(STORAGE_CUSTOM, JSON.stringify(state.custom)); }
+  function loadFav(){ try{ return new Set(JSON.parse(localStorage.getItem(STORAGE_FAV)||'[]')); }catch(e){ return new Set(); } }
+  function saveFav(){ localStorage.setItem(STORAGE_FAV, JSON.stringify(Array.from(state.fav))); }
+
+  function normalizeCity(c){ return cities.includes(c) ? c : 'İstanbul'; }
+  state.city = normalizeCity(state.city);
+
+  function loadArr(key){ try{ return JSON.parse(localStorage.getItem(key)||'[]'); }catch(e){ return []; } }
+  function saveArr(key, arr){ localStorage.setItem(key, JSON.stringify(arr)); }
+  function uniqPushFront(arr, val, max=8){ const a=[val, ...arr.filter(x=>x!==val)]; return a.slice(0,max); }
+  function toggleInArr(arr, val, max=8){ if(arr.includes(val)) return arr.filter(x=>x!==val); return [val, ...arr].slice(0,max); }
+
+
+  function two(n){ return String(n).padStart(2,'0'); }
+  function fmtDT(d){ return new Intl.DateTimeFormat('tr-TR', { timeZone: TZ, day:'2-digit', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit' }).format(d); }
+  function countdown(target){
+    const diff = target.getTime() - Date.now();
+    const abs = Math.floor(Math.abs(diff)/1000);
+    return { dir: diff>=0?'future':'past', d:Math.floor(abs/86400), h:Math.floor((abs%86400)/3600), m:Math.floor((abs%3600)/60), s:abs%60 };
+  }
+  function unitsHTML(p){
+    const map=[['d','Gün'],['h','Saat'],['m','Dakika'],['s','Saniye']];
+    return map.map(([k,l]) => `<div class="u"><strong>${two(p[k])}</strong><span>${l}</span></div>`).join('');
+  }
+
+  function parsePrayerTime(t){
+    if(!t) return null;
+    const [h,m]=String(t).split(':').map(Number);
+    if(Number.isNaN(h)||Number.isNaN(m)) return null;
+    const d=new Date(); d.setHours(h,m,0,0);
+    if(d.getTime() < Date.now()) d.setDate(d.getDate()+1);
+    return d;
+  }
+  function nextSaturday(){
+    const d=new Date();
+    const day=d.getDay();
+    const add=(6-day+7)%7;
+    const t=new Date(d);
+    t.setDate(d.getDate() + (add===0?7:add));
+    t.setHours(0,0,0,0);
+    return t;
+  }
+
+  function resolve(item){
+    if(item.type==='fixed'){ const t=new Date(item.target); return {...item, targetDate:t, targetLabel:fmtDT(t)}; }
+    if(item.dynamic==='endOfDay'){ const t=new Date(); t.setHours(23,59,59,999); return {...item, targetDate:t, targetLabel:fmtDT(t)}; }
+    if(item.dynamic==='nextSaturday'){ const t=nextSaturday(); return {...item, targetDate:t, targetLabel:fmtDT(t)}; }
+    if(item.dynamic==='iftar'){ const t=parsePrayerTime(state.prayer.iftar) || new Date(Date.now()+2*3600*1000); return {...item, targetDate:t, targetLabel:fmtDT(t)}; }
+    if(item.dynamic==='sahur'){ const t=parsePrayerTime(state.prayer.sahur) || new Date(Date.now()+3*3600*1000); return {...item, targetDate:t, targetLabel:fmtDT(t)}; }
+    return item;
+  }
+
+  function allCounters(){
+    const customResolved = state.custom.map(c => ({...c, category:'Özel (Senin)', tag:c.tag||'Özel', type:'fixed', page:'detail.html'}));
+    return [...countersBase, ...customResolved];
+  }
+
+  function filtered(){
+    let list = allCounters().map(resolve);
+    if(state.tab==='fav') list = list.filter(x => state.fav.has(x.id));
+    if(state.tab==='ramazan') list = list.filter(x => ramazanOzelIds.includes(x.id) || x.category==='Ramazan');
+    list = list
+      .filter(x => state.cat==='Tümü' ? true : x.category===state.cat)
+      .filter(x => {
+        if(!state.q.trim()) return true;
+        const hay = `${x.title} ${x.desc} ${x.category} ${x.tag}`.toLocaleLowerCase('tr-TR');
+        return hay.includes(state.q.trim().toLowerCase());
+      });
+    return list;
+  }
+
+  function setActiveNav(tab){
+    $('navAll').classList.toggle('active', tab==='all' || tab==='ramazan');
+    $('navSearch').classList.toggle('active', tab==='search');
+    $('navFav').classList.toggle('active', tab==='fav');
+  }
+
+  function setTab(tab){
+    state.tab=tab;
+    setActiveNav(tab);
+    $('ramazanSection').style.display = (tab==='ramazan') ? 'block' : 'none';
+    const title=$('pageTitle'); const sub=$('pageSub');
+    if(tab==='fav'){ title.textContent='Favoriler'; sub.innerHTML='Yıldızladığın sayaçlar burada. Tıkla → yeni pencerede aç.'; }
+    else if(tab==='search'){ title.textContent='Ara'; sub.innerHTML='Arama yap. Kategori seç. Tıkla → yeni pencerede aç.'; }
+    else if(tab==='ramazan'){ title.textContent='Ramazan Özel'; sub.innerHTML='İftar / Sahur canlı + Ramazan sayaçları. Şehir seç.'; }
+    else { title.textContent='Ara ve Aç'; sub.innerHTML='Tıkla → seçtiğin sayaç <strong>yeni pencerede</strong> büyük görünümle açılır. İftar/Sahur için şehir seç.'; }
+    if(tab==='search') setTimeout(()=> $('search').focus(), 30);
+    render();
+  }
+
+  function renderChips(){
+    const el=$('chips');
+    el.innerHTML = categories.map(c => `<button class="chip${state.cat===c?' active':''}" data-cat="${c}" type="button">${c}</button>`).join('');
+    el.querySelectorAll('[data-cat]').forEach(btn => btn.onclick = () => { state.cat=btn.dataset.cat; render(); });
+  }
+
+  function isFav(id){ return state.fav.has(id); }
+
+  function cardHTML(x){
+    const p=countdown(x.targetDate);
+    const subtitle = (x.dynamic==='iftar'||x.dynamic==='sahur') ? `Şehir: ${state.city}` : x.targetLabel;
+    const star=isFav(x.id)?'⭐':'☆';
+    return `
+      <article class="card" data-id="${x.id}" tabindex="0" role="button" aria-label="${x.title}">
+        <div class="actions">
+          <button class="act" data-act="fav" data-id="${x.id}" type="button" aria-label="Favori">${star}</button>
+          <button class="act" data-act="share" data-id="${x.id}" type="button" aria-label="Paylaş">↗</button>
+        </div>
+        <div>
+          <span class="tag">${(x.tag||x.category)}</span>
+          <h3>${x.title}</h3>
+          <p>${x.desc||''}</p>
+          <div class="units">${unitsHTML(p)}</div>
+        </div>
+        <p class="meta">${subtitle}</p>
+      </article>`;
+  }
+
+  function openCounter(x){
+    if(!x) return;
+    if(x.page==='detail.html'){
+      const url = `detail.html?title=${encodeURIComponent(x.title)}&desc=${encodeURIComponent(x.desc||'')}&tag=${encodeURIComponent(x.tag||x.category)}&target=${encodeURIComponent(x.target)}&id=${encodeURIComponent(x.id)}`;
+      window.open(url, '_blank', 'noopener'); return;
+    }
+    if(x.dynamic==='iftar'||x.dynamic==='sahur'){
+      window.open(`${x.page}?city=${encodeURIComponent(state.city)}`, '_blank', 'noopener'); return;
+    }
+    window.open(x.page, '_blank', 'noopener');
+  }
+
+  async function shareCounter(x){
+    if(!x) return;
+    const base = new URL(x.page, window.location.href).toString();
+    const shareUrl = (x.dynamic==='iftar'||x.dynamic==='sahur') ? (base + `?city=${encodeURIComponent(state.city)}`) : base;
+    try{
+      if(navigator.share) await navigator.share({ title:x.title, text:x.desc||'Sayaç', url:shareUrl });
+      else { await navigator.clipboard.writeText(shareUrl); showToast('Link kopyalandı'); }
+    }catch(e){
+      try{ await navigator.clipboard.writeText(shareUrl); showToast('Link kopyalandı'); }
+      catch(_){ showToast('Paylaşım yapılamadı'); }
+    }
+  }
+
+  function toggleFav(id){
+    if(!id) return;
+    if(state.fav.has(id)){ state.fav.delete(id); showToast('Favoriden çıkarıldı'); }
+    else { state.fav.add(id); showToast('Favoriye eklendi'); }
+    saveFav(); render();
+  }
+
+  function render(){
+    renderChips();
+    const grid=$('grid');
+    const list=filtered();
+    grid.innerHTML = list.length ? list.map(cardHTML).join('') : `
+      <div class="card" style="cursor:default">
+        <div>
+          <span class="tag">Boş</span>
+          <h3>${state.tab==='fav' ? 'Favori yok' : 'Bulunamadı'}</h3>
+          <p>${state.tab==='fav' ? 'Bir sayaçta ☆ ikonuna basarak favoriye ekle.' : 'Aramayı değiştir veya sıfırla.'}</p>
+        </div>
+      </div>`;
+
+    grid.querySelectorAll('.card[data-id]').forEach(card => {
+      const id=card.getAttribute('data-id');
+      const x=allCounters().find(c=>c.id===id);
+      const open=()=>openCounter(x);
+      card.onclick=(e)=>{ const act=e.target && e.target.closest && e.target.closest('[data-act]'); if(act) return; open(); };
+      card.onkeydown=(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); } };
+    });
+    grid.querySelectorAll('[data-act="fav"]').forEach(btn => btn.onclick=(e)=>{ e.stopPropagation(); toggleFav(btn.getAttribute('data-id')); });
+    grid.querySelectorAll('[data-act="share"]').forEach(btn => btn.onclick=(e)=>{ e.stopPropagation(); const id=btn.getAttribute('data-id'); const x=allCounters().find(c=>c.id===id); shareCounter(x); });
+  }
+
+  async function fetchPrayer(){
+    const now=new Date();
+    const dd=String(now.getDate()).padStart(2,'0');
+    const mm=String(now.getMonth()+1).padStart(2,'0');
+    const yyyy=now.getFullYear();
+    const date=`${dd}-${mm}-${yyyy}`;
+    const url=`https://api.aladhan.com/v1/timingsByCity/${date}?city=${encodeURIComponent(state.city)}&country=Turkey&method=13`;
+    try{
+      const res=await fetch(url, { cache:'no-store' });
+      const json=await res.json();
+      const t=(json && json.data && json.data.timings) ? json.data.timings : {};
+      state.prayer.iftar = t.Maghrib || null;
+      state.prayer.sahur = t.Fajr || null;
+    }catch(e){ state.prayer.iftar=null; state.prayer.sahur=null; }
+  }
+
+  function addCustom(){
+    const title=prompt('Özel sayaç adı? (örn: Doğum günüm)'); if(!title) return;
+    const target=prompt('Hedef tarih/saat (YYYY-MM-DD HH:MM). Örn: 2026-12-31 23:59'); if(!target) return;
+    const m=target.trim().replace(' ', 'T');
+    if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(m)){ showToast('Format yanlış'); return; }
+    const desc=prompt('Kısa açıklama (opsiyonel)')||'';
+    const tag=prompt('Etiket (opsiyonel)')||'Özel';
+    const id='custom-'+Date.now();
+    state.custom.unshift({id,title,desc,tag,target:m});
+    saveCustom(); state.cat='Özel (Senin)'; setTab('all'); showToast('Özel sayaç eklendi');
+  }
+
+  function resetAll(){
+    state.q=''; state.cat='Tümü';
+    $('search').value='';
+    setTab('all');
+  }
+
+  // bottom nav
+  $('navAll').onclick=()=>setTab('all');
+  $('navSearch').onclick=()=>setTab('search');
+  $('navFav').onclick=()=>setTab('fav');
+
+  // toolbar
+  $('search').addEventListener('input', (e)=>{
+    state.q=e.target.value||'';
+    if(state.tab!=='search') setTab('search'); else render();
+  });
+  $('featured').onclick=()=>{ state.q=''; $('search').value=''; setTab('all'); window.scrollTo({top:0, behavior:'smooth'}); };
+  $('reset').onclick=async ()=>{ resetAll(); await fetchPrayer(); render(); };
+  $('addCustom').onclick=addCustom;
+
+  
+  // --- CITY PICKER (Instagram-style) + Recents/Favorites ---
+    const STORAGE_CITY_RECENT = 'sayachane-city-recent-v1';
+  const STORAGE_CITY_FAV = 'sayachane-city-fav-v1';
+  const QUICK = ['İstanbul','Ankara','İzmir','Bursa','Antalya','Samsun','Trabzon','Konya','Adana','Gaziantep'];
+
+  function loadArr(key){ try{ return JSON.parse(localStorage.getItem(key)||'[]'); }catch(e){ return []; } }
+  function saveArr(key, arr){ localStorage.setItem(key, JSON.stringify(arr)); }
+  function uniqPushFront(arr, val, max=8){ const a=[val, ...arr.filter(x=>x!==val)]; return a.slice(0,max); }
+  function toggleInArr(arr, val, max=8){ if(arr.includes(val)) return arr.filter(x=>x!==val); return [val, ...arr].slice(0,max); }
+  function normalizeCity(c){ return cities.includes(c) ? c : 'İstanbul'; }
+
+  // initialize city from storage
+  state.city = normalizeCity(localStorage.getItem(STORAGE_CITY) || state.city || 'İstanbul');
+
+  function setCityUI(){
+    const t = $('cityBtnText');
+    if(t) t.textContent = state.city;
+  }
+
+  function openCity(){
+    document.body.classList.add('cityopen');
+    $('cityOverlay').setAttribute('aria-hidden','false');
+    $('citySearch').value = '';
+    renderCityQuick();
+    renderCityRecent();
+    renderCityFav();
+    renderCityList('');
+    setTimeout(()=> $('citySearch').focus(), 40);
+  }
+  function closeCity(){
+    document.body.classList.remove('cityopen');
+    $('cityOverlay').setAttribute('aria-hidden','true');
+  }
+
+  async function selectCity(city){
+    state.city = normalizeCity(city);
+    localStorage.setItem(STORAGE_CITY, state.city);
+    const recent = loadArr(STORAGE_CITY_RECENT);
+    saveArr(STORAGE_CITY_RECENT, uniqPushFront(recent, state.city, 8));
+    setCityUI();
+    renderCityRecent();
+    await fetchPrayer();
+    render();
+  }
+
+  function renderCityQuick(){
+    const q = $('cityQuick');
+    if(!q) return;
+    q.innerHTML = QUICK.map(c => `<button class="chip${state.city===c?' active':''}" type="button" data-q="${c}">${c}</button>`).join('');
+    q.querySelectorAll('[data-q]').forEach(b => b.onclick = async ()=>{ await selectCity(b.getAttribute('data-q')); closeCity(); });
+  }
+
+  function renderCityRecent(){
+    const el = $('cityRecent');
+    if(!el) return;
+    const recent = loadArr(STORAGE_CITY_RECENT).filter(c=>cities.includes(c));
+    el.innerHTML = recent.length ? recent.map(c=>`<button class="chip${state.city===c?' active':''}" type="button" data-r="${c}">${c}</button>`).join('')
+                                 : '<span class="hint" style="margin:0">Henüz yok.</span>';
+    el.querySelectorAll('[data-r]').forEach(b => b.onclick = async ()=>{ await selectCity(b.getAttribute('data-r')); closeCity(); });
+  }
+
+  function renderCityFav(){
+    const el = $('cityFav');
+    if(!el) return;
+    const fav = loadArr(STORAGE_CITY_FAV).filter(c=>cities.includes(c));
+    el.innerHTML = fav.length ? fav.map(c=>`<button class="chip${state.city===c?' active':''}" type="button" data-f="${c}">❤ ${c}</button>`).join('')
+                              : '<span class="hint" style="margin:0">Kalp ile şehir ekle.</span>';
+    el.querySelectorAll('[data-f]').forEach(b => b.onclick = async ()=>{ await selectCity(b.getAttribute('data-f')); closeCity(); });
+  }
+
+  function renderCityList(query){
+    const list = $('cityList');
+    if(!list) return;
+    const q = (query||'').trim().toLocaleLowerCase('tr-TR');
+    const items = cities.filter(c => !q ? true : c.toLocaleLowerCase('tr-TR').includes(q));
+    const favArr = loadArr(STORAGE_CITY_FAV);
+
+    list.innerHTML = items.map(c => {
+      const isSel = state.city===c;
+      const isFav = favArr.includes(c);
+      const hint = isSel ? 'seçili' : (isFav ? 'favori' : '');
+      const heart = isFav ? '❤' : '♡';
+      return `
+        <div class="cityItem" role="button" tabindex="0" data-city="${c}">
+          <div><strong>${c}</strong><div><small>${hint}</small></div></div>
+          <div style="display:flex; align-items:center; gap:10px">
+            <button class="heart" type="button" data-heart="${c}" aria-label="Favori">${heart}</button>
+            <div aria-hidden="true">${isSel?'✓':''}</div>
+          </div>
+        </div>`;
+    }).join('');
+
+    list.querySelectorAll('[data-heart]').forEach(btn => btn.onclick = (e)=>{
+      e.stopPropagation();
+      const city = btn.getAttribute('data-heart');
+      const fav = loadArr(STORAGE_CITY_FAV);
+      const next = toggleInArr(fav, city, 8);
+      saveArr(STORAGE_CITY_FAV, next);
+      renderCityFav();
+      renderCityList($('citySearch').value || '');
+    });
+
+    list.querySelectorAll('[data-city]').forEach(el => {
+      const pick = async ()=>{ await selectCity(el.getAttribute('data-city')); closeCity(); };
+      el.onclick = (e)=>{ const hb=e.target && e.target.closest && e.target.closest('[data-heart]'); if(hb) return; pick(); };
+      el.onkeydown = (e)=>{ if(e.key==='Enter'||e.key===' ') { e.preventDefault(); pick(); } };
+    });
+  }
+
+// city button (şehir seçici)
+  $('cityBtn').onclick = openCity;
+  $('cityClose').onclick = closeCity;
+  $('cityOverlay').onclick = closeCity;
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeCity(); });
+  $('citySearch').addEventListener('input', (e)=> renderCityList(e.target.value || ''));
+
+  // drawer
+  const overlay=$('overlay'); const drawer=$('drawer');
+  function openDrawer(){ overlay.classList.add('open'); drawer.classList.add('open'); }
+  function closeDrawer(){ overlay.classList.remove('open'); drawer.classList.remove('open'); }
+  $('menuBtn').onclick=openDrawer;
+  $('menuClose').onclick=closeDrawer;
+  overlay.onclick=closeDrawer;
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeDrawer(); });
+
+  // drawer buttons
+  function goHash(h){ closeDrawer(); location.hash=h; }
+  $('menuRamazan').onclick=()=>goHash('ramazan');
+  $('menuSinavlar').onclick=()=>goHash('sinavlar');
+  $('menuOzelgunler').onclick=()=>goHash('ozelgunler');
+  $('menuGunluk').onclick=()=>goHash('gunluk');
+  $('menuAll').onclick=()=>goHash('');
+  $('menuAra').onclick=()=>goHash('search');
+  $('menuFav').onclick=()=>goHash('fav');
+
+  // hash routing + presets
+  function applyCategoryPreset(kind){
+    if(kind==='sinavlar'){ state.cat='Eğitim'; state.q=''; $('search').value=''; }
+    if(kind==='ozelgunler'){ state.cat='Özel Gün'; state.q=''; $('search').value=''; }
+    if(kind==='gunluk'){ state.cat='Günlük'; state.q=''; $('search').value=''; }
+    if(kind==='ramazan'){ state.cat='Ramazan'; state.q=''; $('search').value=''; }
+  }
+
+  function mountHash(){
+    const h=(location.hash||'').replace('#','').trim();
+    if(h==='ramazan'){ applyCategoryPreset('ramazan'); setTab('ramazan'); return; }
+    if(h==='sinavlar'){ applyCategoryPreset('sinavlar'); setTab('all'); $('pageTitle').textContent='Sınavlar'; $('pageSub').innerHTML='YKS / KPSS gibi sınavlara geri sayım. Tıkla → yeni pencerede aç.'; $('ramazanSection').style.display='none'; render(); return; }
+    if(h==='ozelgunler'){ applyCategoryPreset('ozelgunler'); setTab('all'); $('pageTitle').textContent='Özel Günler'; $('pageSub').innerHTML='Bayramlar ve özel günler. Tıkla → yeni pencerede aç.'; $('ramazanSection').style.display='none'; render(); return; }
+    if(h==='gunluk'){ applyCategoryPreset('gunluk'); setTab('all'); $('pageTitle').textContent='Günlük Sayaçlar'; $('pageSub').innerHTML='Günün sonu, hafta sonu gibi günlük sayaçlar. Tıkla → yeni pencerede aç.'; $('ramazanSection').style.display='none'; render(); return; }
+    if(h==='fav'){ setTab('fav'); return; }
+    if(h==='search'){ setTab('search'); return; }
+    setTab('all');
+  }
+  window.addEventListener('hashchange', mountHash);
+
+  (async function init(){
+    setCityUI();
+    await fetchPrayer();           // <- updates iftar/sahur
+    renderChips();
+    mountHash();
+    render();
+    setInterval(render, 1000);
+  })();
+})();
+</script>
+</body>
+</html>

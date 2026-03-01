@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Günlük Sayaçlar | Sayaçhane</title>
+<meta name="description" content="Günün sonu, hafta sonu gibi günlük sayaçlar. Basit, hızlı ve modern." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#0a0d14" />
+<link rel="canonical" href="https://sayachane.com/gunluk.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Günlük Sayaçlar | Sayaçhane" />
+<meta property="og:description" content="Günün sonu, hafta sonu gibi günlük sayaçlar. Basit, hızlı ve modern." />
+<meta property="og:url" content="https://sayachane.com/gunluk.html" />
+<meta property="og:image" content="https://sayachane.com/og-cover.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Günlük Sayaçlar | Sayaçhane" />
+<meta name="twitter:description" content="Günün sonu, hafta sonu gibi günlük sayaçlar. Basit, hızlı ve modern." />
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "WebSite", "name": "Sayaçhane", "url": "https://sayachane.com/", "inLanguage": "tr-TR", "description": "Ramazan, iftar, sahur, YKS, KPSS ve özel gün sayaçları."}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Günlük Sayaçlar | Sayaçhane", "description": "Günün sonu, hafta sonu gibi günlük sayaçlar. Basit, hızlı ve modern.", "url": "https://sayachane.com/gunluk.html", "inLanguage": "tr-TR", "isPartOf": {"@type": "WebSite", "name": "Sayaçhane", "url": "https://sayachane.com/"}}]}</script>
+<style>
+:root{
+  --bg:#0a0d14;
+  --bg2:#0b1020;
+  --surface: rgba(255,255,255,.05);
+  --surface2: rgba(255,255,255,.035);
+  --stroke: rgba(255,255,255,.10);
+  --stroke2: rgba(255,255,255,.14);
+  --text: #f6f7fb;
+  --muted: rgba(246,247,251,.64);
+  --muted2: rgba(246,247,251,.46);
+  --brand: #8b5cf6;
+  --brand2:#22c55e;
+  --brand3:#06b6d4;
+  --shadow: 0 18px 70px rgba(0,0,0,.55);
+  --r-xl: 30px;
+  --r-lg: 22px;
+  --r-md: 16px;
+  --w: 1080px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(800px 520px at 18% 10%, rgba(139,92,246,.18), transparent 60%),
+    radial-gradient(760px 540px at 82% 78%, rgba(6,182,212,.12), transparent 60%),
+    radial-gradient(680px 520px at 70% 18%, rgba(34,197,94,.10), transparent 65%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+body:before{
+  content:"";
+  position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  opacity:.16;
+  pointer-events:none;
+  mix-blend-mode:overlay;
+  z-index:0;
+}
+.app{position:relative; z-index:1; min-height:100%}
+.appbar{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(10,13,20,.66);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.appbar-inner{
+  width:min(var(--w), calc(100% - 24px));
+  margin:0 auto;
+  padding:12px 0;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+.left, .right{display:flex; align-items:center; gap:10px}
+.brand{display:flex; align-items:center; gap:12px; min-width:0}
+.brand strong{font-size:14px; letter-spacing:.01em}
+.brand span{display:block; font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,var(--brand),#a78bfa);box-shadow:0 0 0 6px rgba(139,92,246,.10)}
+.iconbtn{
+  width:44px;height:44px;border-radius:14px;
+  border:1px solid var(--stroke);
+  background: var(--surface2);
+  color:var(--text);
+  cursor:pointer;
+  display:grid; place-items:center;
+  transition:.16s ease;
+  user-select:none;
+}
+.iconbtn:hover{transform:translateY(-1px); border-color:var(--stroke2)}
+.pill{
+  padding:10px 12px; border-radius:999px;
+  background: var(--surface2);
+  border:1px solid var(--stroke);
+  font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase;
+  cursor:pointer;
+  transition:.16s ease;
+}
+.pill:hover{border-color:var(--stroke2); transform:translateY(-1px)}
+.container{width:min(var(--w), calc(100% - 24px)); margin:0 auto; padding:22px 0 92px}
+.card-surface{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-xl);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  box-shadow: var(--shadow);
+}
+.home-card{padding:34px;text-align:center;position:relative;overflow:hidden}
+.home-card:after{
+  content:""; position:absolute; right:-180px; bottom:-200px;
+  width:420px; height:420px; border-radius:999px;
+  background: radial-gradient(circle, rgba(139,92,246,.20), transparent 68%);
+  pointer-events:none;
+}
+.time{font-size:clamp(58px, 10vw, 92px);line-height:.92;letter-spacing:-.06em;margin:18px 0 0}
+.date{margin:14px 0 0;font-size:15px;color:var(--muted);line-height:1.8}
+.btn{
+  min-height:56px;padding:0 18px;border-radius:18px;cursor:pointer;
+  border:1px solid var(--stroke);background: var(--surface2);color:var(--text);
+  font-weight:900;letter-spacing:.01em;transition:.16s ease;
+  display:inline-flex;align-items:center;gap:10px;justify-content:center
+}
+.btn:hover{transform:translateY(-1px);border-color:var(--stroke2)}
+.btn.primary{border:none;background:linear-gradient(135deg,var(--brand),#a78bfa);box-shadow:0 16px 34px rgba(139,92,246,.18)}
+.hint{margin-top:16px;color:var(--muted2);font-size:13px;line-height:1.8}
+.header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.h1{margin:0;font-size:28px;letter-spacing:-.04em}
+.sub{margin:8px 0 0;color:var(--muted);line-height:1.8;font-size:14px}
+.toolbar{display:grid;grid-template-columns:minmax(0,1fr) 260px auto;gap:12px;margin:14px 0 14px}
+.field,.select{
+  min-height:56px;border-radius:18px;border:1px solid var(--stroke);
+  background: var(--surface2);display:flex;align-items:center;gap:10px;padding:0 14px
+}
+.field input,.select select{width:100%;border:none;outline:none;background:transparent;color:var(--text);font-size:15px}
+.select select option{color:#0b1020}
+.smallbtn{min-height:56px;padding:0 16px;border-radius:18px;border:1px solid var(--stroke);background:var(--surface2);color:var(--text);font-weight:900;cursor:pointer;transition:.16s ease}
+.smallbtn:hover{transform:translateY(-1px);border-color:var(--stroke2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
+.chip{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--stroke);background:var(--surface2);color:var(--text);font-size:12px;font-weight:950;cursor:pointer;transition:.16s ease;letter-spacing:.04em}
+.chip.active{background: rgba(139,92,246,.16);border-color: rgba(139,92,246,.34)}
+.section{margin:6px 0 14px;padding:14px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03))}
+.section h2{margin:0;font-size:14px;letter-spacing:.10em;text-transform:uppercase;color:rgba(246,247,251,.82)}
+.section p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px}
+.card{
+  padding:16px;border-radius:22px;border:1px solid var(--stroke);background:var(--surface2);
+  cursor:pointer;transition:.16s ease;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;position:relative
+}
+.card:hover{transform:translateY(-1px);border-color:var(--stroke2)}
+.tag{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);font-size:11px;font-weight:950;letter-spacing:.10em;text-transform:uppercase;color:rgba(246,247,251,.85);margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.03em}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.units{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:8px;margin-top:14px}
+.u{text-align:center;padding:10px 8px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+.u strong{display:block;font-size:20px;letter-spacing:-.04em;margin-bottom:4px}
+.u span{display:block;font-size:11px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+.meta{margin-top:14px;color:var(--muted2);line-height:1.8;font-size:13px}
+.actions{position:absolute;top:12px;right:12px;display:flex;gap:8px}
+.act{
+  width:38px;height:38px;border-radius:14px;border:1px solid rgba(255,255,255,.10);
+  background: rgba(10,13,20,.35);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);
+  color:var(--text);display:grid;place-items:center;cursor:pointer;transition:.16s ease
+}
+.act:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.16)}
+.detail-wrap{display:grid;place-items:center;padding:22px 22px 92px}
+.detail-card{width:min(980px, 100%);padding:28px;position:relative;overflow:hidden}
+.detail-card:after{content:"";position:absolute;left:-200px;top:-220px;width:440px;height:440px;border-radius:999px;background: radial-gradient(circle, rgba(6,182,212,.16), transparent 70%);pointer-events:none}
+.kicker{display:inline-flex;align-items:center;gap:10px;min-height:34px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);color:rgba(246,247,251,.86);font-size:11px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+.h2{margin:14px 0 0;font-size:clamp(28px, 6vw, 54px);letter-spacing:-.06em;line-height:.95}
+.desc{margin:12px 0 0;color:var(--muted);line-height:1.9}
+.bigunits{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:10px;margin-top:18px}
+.bu{padding:18px 10px;border-radius:18px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);text-align:center}
+.bu strong{display:block;font-size:34px;letter-spacing:-.06em;margin-bottom:6px}
+.bu span{display:block;font-size:11px;color:var(--muted2);letter-spacing:.14em;text-transform:uppercase}
+.bottomnav{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(10px + var(--safe-b));
+  width:min(720px, calc(100% - 24px));
+  border-radius:18px;border:1px solid rgba(255,255,255,.10);
+  background:rgba(10,13,20,.66);
+  backdrop-filter: blur(16px);-webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 16px 58px rgba(0,0,0,.45);
+  display:grid;grid-template-columns:repeat(3,1fr);padding:8px;z-index:20
+}
+.navbtn{border:none;background:transparent;color:var(--muted);border-radius:14px;padding:10px 10px;cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;font-weight:950;letter-spacing:.02em;transition:.16s ease}
+.navbtn span{font-size:11px;letter-spacing:.10em;text-transform:uppercase}
+.navbtn.active{color:var(--text);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10)}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.18s ease;z-index:30}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;left:12px;top:12px;bottom:12px;
+  width:min(360px, calc(100% - 24px));
+  border-radius:22px;border:1px solid rgba(255,255,255,.10);
+  background:rgba(10,13,20,.82);
+  backdrop-filter: blur(16px);-webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  transform: translateX(-110%);transition:.20s ease;
+  z-index:31;padding:16px;display:flex;flex-direction:column;gap:10px
+}
+.drawer.open{transform: translateX(0)}
+.drawer h3{margin:4px 0 0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,247,251,.85)}
+.drawer .muted{color:var(--muted);font-size:13px;line-height:1.7}
+.drawer a.btn,.drawer button.btn{width:100%;justify-content:flex-start}
+.toast{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(90px + var(--safe-b));
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);
+  color:var(--text);border-radius:14px;padding:10px 12px;font-weight:950;font-size:13px;
+  opacity:0;pointer-events:none;transition:.18s ease;z-index:40
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(-2px)}
+@media (max-width: 980px){
+  .toolbar{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .units,.bigunits{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+@media (max-width: 560px){
+  .grid{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+</head>
+<body>
+  <div class="app">
+    <header class="appbar">
+      <div class="appbar-inner">
+        <div class="left"><a class="iconbtn" href="index.html" aria-label="Ana sayfa">←</a></div>
+        <a class="brand" href="index.html" aria-label="Sayaçhane ana sayfa">
+          <span class="dot" aria-hidden="true"></span>
+          <div><strong>Sayaçhane</strong><span>Kategori</span></div>
+        </a>
+        <div class="right"><button class="pill" id="openHub" type="button">Sayaç Merkezi</button></div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="home-card card-surface" style="text-align:left">
+        <div class="tag" style="display:inline-flex">📅 KATEGORİ</div>
+        <div style="margin-top:10px">
+          <div class="time" style="font-size:44px; letter-spacing:-.04em; margin:0">Günlük Sayaçlar</div>
+          <div class="date" style="margin-top:10px">Bugünün bitişi, hafta sonu ve benzeri günlük sayaçlar.</div>
+          <div class="hint" style="margin-top:12px">Günün sonu, hafta sonu gibi günlük sayaçlar. Basit, hızlı ve modern.</div>
+        </div>
+
+        <div style="margin-top:22px; display:flex; gap:10px; flex-wrap:wrap">
+          <button class="btn primary" id="openFiltered" type="button">Sayaçları Gör</button>
+          <a class="btn" href="hub.html#search">Ara</a>
+          <a class="btn" href="hub.html#fav">Favoriler</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="bottomnav" aria-label="Alt menü">
+      <button class="navbtn active" type="button" onclick="location.href='index.html'"><div>🏠</div><span>Ana</span></button>
+      <button class="navbtn" type="button" onclick="location.href='hub.html#search'"><div>🔎</div><span>Ara</span></button>
+      <button class="navbtn" type="button" onclick="location.href='hub.html#fav'"><div>⭐</div><span>Fav</span></button>
+    </nav>
+  </div>
+
+<script>
+  function openHub(hash=''){
+    const url = hash ? `hub.html#${hash}` : 'hub.html';
+    window.open(url, '_blank', 'noopener');
+  }
+  document.getElementById('openHub').onclick = () => openHub('');
+  document.getElementById('openFiltered').onclick = () => openHub('gunluk');
+</script>
+</body>
+</html>
